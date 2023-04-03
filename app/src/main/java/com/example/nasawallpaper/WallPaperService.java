@@ -59,6 +59,7 @@ public class WallPaperService extends Service {
         try {
 
             WallpaperManager.getInstance(this).setBitmap(bitmapWallpaper);
+            MainActivity.imageLoaded.setImageBitmap(bitmapWallpaper);
 
         } catch (IOException e) {
             Toast.makeText(getApplicationContext(), "EXCEPTION", Toast.LENGTH_SHORT).show();
