@@ -19,19 +19,16 @@ public class WallManager extends AsyncTask<Object, Void, Bitmap> {
 
     @Override
     protected Bitmap doInBackground(Object... objects) {
-        Bitmap bitmap;
         try {
 //            URL url = new URL(strings[0]);
 
             //
-            String key="AIzaSyDdBPCVzYyCmtFtZSSihqOSUsPZglM5x3E";
 
             URL url = new URL(
                     "https://api.nasa.gov/planetary/apod?api_key="+"C8X3Ne6xlKtjlfcPkk6q3YJvmYtE6lY8NIq4aAhF"
             );
 
-
-            Log.i(TAG, "URL1 - " + url);
+            Log.i(TAG, "URL - " + url);
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
@@ -47,6 +44,8 @@ public class WallManager extends AsyncTask<Object, Void, Bitmap> {
             Log.i(TAG, "BR - " + br);
 
             String output;
+
+
             while ((output = br.readLine()) != null) {
                 Log.i(TAG, "IMAGE21 - " + output);     //Will print the google search links
 
